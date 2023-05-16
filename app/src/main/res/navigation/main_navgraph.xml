@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navgraph"
+    app:startDestination="@id/editpanel">
+
+    <fragment
+        android:id="@+id/editpanel"
+        android:name="com.example.autodatos.fragments.editpanel"
+        android:label="fragment_editpanel"
+        tools:layout="@layout/fragment_editpanel" />
+    <fragment
+        android:id="@+id/homelistpanel"
+        android:name="com.example.autodatos.fragments.homelistpanel"
+        android:label="fragment_homelistpanel"
+        tools:layout="@layout/fragment_homelistpanel" >
+        <action
+            android:id="@+id/action_homelistpanel_to_editpanel"
+            app:destination="@id/editpanel" />
+    </fragment>
+</navigation>
